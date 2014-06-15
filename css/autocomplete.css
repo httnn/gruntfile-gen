@@ -19,6 +19,7 @@
   border-right: 1px solid #888;
   border-bottom: 1px solid #888;
   z-index: 1;
+  padding: 0;
 }
 
 .autocomplete li{

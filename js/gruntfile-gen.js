@@ -4,18 +4,25 @@ angular.module("gruntfile-gen", ["autocomplete"])
 		load: function (callback) {
 			var t = this;
 			$http({ method: "GET", url: "packages/packages.json" })
-			.success(function(data) {
-				t.packages = data;
-				callback();
+			.success(function(packages) {
+				t.packages = packages;
+				$http({ method: "GET", url: "packages/templates.txt"})
+				.success(function (templates) {
+					var packages = templates.split("#");
+
+					for(var i = 0; i < packages.length; i++) {
+						var p = packages[i].trim().split("\n");
+						t.packages[p.shift().replace(":", "").trim()].template = p.join("\n");
+					}
+
+					callback();
+				});
 			});
 		},
 		packages: {}
 	};
 })
-.controller("PackageCtrl", function ($scope, Packages) {
-	$scope.packages = {};
-	$scope.names = {};
-
+.controller("PackageCtrl", function ($scope, $http, Packages) {
 	$scope.selectedPackages = {};
 
 	$scope.addPackage = function (package) {
@@ -29,9 +36,8 @@ angular.module("gruntfile-gen", ["autocomplete"])
 
 	$scope.makeTemplate = function (package) {
 		var output = package.template;
-		for(option in package.options) {
+		for(option in package.options)
 			output = output.replace(new RegExp("\%" + option + "\%"), package.options[option].value);
-		}
 		return output;
 	};
 

@@ -1,24 +1,52 @@
 {
 	"grunt-contrib-concat": {
 		"task": "concat",
-		"template": "src: %source-files%,\ndest: %dest-files%",
 		"url": "https://github.com/gruntjs/grunt-contrib-concat",
+		"version": "*",
 		"options": {
-			"version": {
-				"name": "Version",
-				"value": "*"
-			},
-			"source-files": {
+			"src": {
 				"name": "Source files",
 				"value": "",
 				"placeholder": "'source.js' or ['multiple.js', 'sources.js']",
 				"description": "Specify the source file(s) as a single file or multiple files in an array."
 			},
-			"dest-files": {
+			"dest": {
 				"name": "Destination files",
 				"value": "",
 				"placeholder": "'destination.js'",
 				"description": "Specify the single destination file."
+			}
+		}
+	},
+	"grunt-contrib-watch": {
+		"task": "watch",
+		"url": "https://github.com/gruntjs/grunt-contrib-watch",
+		"version": "*",
+		"options": {
+			"files": {
+				"name": "Files",
+				"value": "",
+				"placeholder": "['array_of.js', 'files.css']",
+				"description": ""
+			},
+			"tasks": {
+				"name": "Tasks",
+				"value": "",
+				"placeholder": "['array', 'of', 'tasks']",
+				"description": ""
+			}
+		}
+	},
+	"grunt-contrib-less": {
+		"task": "less",
+		"url": "https://github.com/gruntjs/grunt-contrib-less",
+		"version": "*",
+		"options": {
+			"paths": {
+				"name": "Paths",
+				"value": "",
+				"placeholder": "['array_of.js', 'files.css']",
+				"description": "Specifies directories to scan for @import directives when parsing."
 			}
 		}
 	}

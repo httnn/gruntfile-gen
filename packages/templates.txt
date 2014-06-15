@@ -1,0 +1,10 @@
+grunt-contrib-concat:
+				src: %src%,
+				dest: %dest%
+#
+grunt-contrib-watch:
+				files: %files%,
+				tasks: %tasks%
+#
+grunt-contrib-less:
+				paths: %paths%
