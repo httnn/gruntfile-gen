@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Gruntfile Generator</title>
-	<link rel="stylesheet" href="http://bootswatch.com/flatly/bootstrap.min.css">
+	<title>Gruntfile generator</title>
+	<link rel="stylesheet" href="http://bootswatch.com/yeti/bootstrap.min.css">
 	<link rel="stylesheet" href="css/autocomplete.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.min.js"></script>
 	<script src="js/autocomplete.js"></script>
@@ -17,12 +17,13 @@
 </head>
 <body ng-app="gruntfile-gen">
 	<div class="container" ng-controller="PackageCtrl">
-		<h1>Gruntfile Generator</h1>
-
 		<div class="col-md-7">
+			<div class="page-header">
+				<h1>Gruntfile generator</h1>
+			</div>
 			<form role="form">
 				<div class="form-group">
-					<autocomplete type="text" on-select="addPackage" ng-model="selectedPackage" attr-placeholder="Add package..." data="names" attr-input-class="form-control" />
+					<autocomplete type="text" on-select="addPackage" ng-model="selectedPackage" attr-placeholder="Start typing to add package..." data="names" attr-input-class="form-control" />
 				</div>
 			</form>
 
@@ -51,12 +52,12 @@
 		</div>
 
 		<div class="col-md-5">
-<h2>package.json<span ng-click="savePackage()" class="glyphicon glyphicon-save pull-right"></span></h2>
+<h3>package.json<span ng-click="savePackage()" class="glyphicon glyphicon-download-alt pull-right"></span></h3>
 <pre id="package">
 {
     'name' : 'MySite',
     'title' : 'MySite',
-    'version' : '0.0.0',
+    'version' : '0.0.1',
     'devDependencies': {
     	<span ng-repeat="(name, package) in selectedPackages">'{{ name }}': '{{ package.version }}'<span ng-if="!$last">,
 		</span></span>
@@ -64,7 +65,7 @@
 }
 </pre>
 
-<h2>Gruntfile.js<span ng-click="saveGruntfile()" class="glyphicon glyphicon-save pull-right"></span></h2>
+<h3>Gruntfile.js<span ng-click="saveGruntfile()" class="glyphicon glyphicon-download-alt pull-right"></span></h3>
 <pre id="gruntfile">
 module.exports = function(grunt) {
 	grunt.initConfig({
