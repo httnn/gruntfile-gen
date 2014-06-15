@@ -6,4 +6,5 @@ A simple tool for generating the package.json and Gruntfile.js files. Not intend
 Try it out here: [http://bodyflex.github.io/gruntfile-gen/](http://bodyflex.github.io/gruntfile-gen/)
 
 
-![Built with Bootstrap](http://pixel-cookers.github.io/built-with-badges/angular/angular-long-flat.png) ![Built with Bootstrap](http://pixel-cookers.github.io/built-with-badges/bootstrap/bootstrap-long-flat.png) 
+![Built with Bootstrap](http://pixel-cookers.github.io/built-with-badges/angular/angular-long-flat.png)
+![Built with Bootstrap](http://pixel-cookers.github.io/built-with-badges/bootstrap/bootstrap-long-flat.png) 
