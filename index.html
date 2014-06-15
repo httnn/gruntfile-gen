@@ -41,7 +41,7 @@
 						</div>
 
 						<div class="form-group" ng-repeat="option in package.options">
-							<label class="col-sm-3 control-label" title="{{ option.description }}">{{ option.name }}</label>
+							<label class="col-sm-3 control-label"><abbr title="{{ option.description }}">{{ option.name }}</abbr></label>
 							<div class="col-sm-9">
 								<input type="text" class="form-control" ng-model="option.value" placeholder="{{ option.placeholder }}" />
 							</div>
@@ -52,7 +52,7 @@
 		</div>
 
 		<div class="col-md-5">
-<h3>package.json<span ng-click="savePackage()" class="glyphicon glyphicon-download-alt pull-right"></span></h3>
+<h3>package.json<a href="#" ng-click="savePackage()" class="pull-right"><span class="glyphicon glyphicon-download-alt"></span></a></h3>
 <pre id="package">
 {
     'name' : 'MySite',
@@ -65,7 +65,7 @@
 }
 </pre>
 
-<h3>Gruntfile.js<span ng-click="saveGruntfile()" class="glyphicon glyphicon-download-alt pull-right"></span></h3>
+<h3>Gruntfile.js<a href="#" ng-click="saveGruntfile()" class="pull-right"><span class="glyphicon glyphicon-download-alt"></span></a></h3>
 <pre id="gruntfile">
 module.exports = function(grunt) {
 	grunt.initConfig({
