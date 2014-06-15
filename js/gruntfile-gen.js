@@ -3,7 +3,7 @@ angular.module("gruntfile-gen", ["autocomplete"])
 	return {
 		load: function (callback) {
 			var t = this;
-			$http({ method: "GET", url: "js/packages.json" })
+			$http({ method: "GET", url: "packages/packages.json" })
 			.success(function(data) {
 				t.packages = data;
 				callback();

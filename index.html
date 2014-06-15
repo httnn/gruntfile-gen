@@ -41,11 +41,11 @@
 <h2>package.json<span ng-click="savePackage()" class="glyphicon glyphicon-save pull-right"></span></h2>
 <pre id="package" style="font-size:0.75em;">
 {
-    "name" : "MySite",
-    "title" : "MySite",
-    "version" : "0.0.0",
-    "devDependencies": {
-    	<span ng-repeat="(name, package) in selectedPackages">"{{ name }}": "{{ package.options.version.value }}",
+    'name' : 'MySite',
+    'title' : 'MySite',
+    'version' : '0.0.0',
+    'devDependencies': {
+    	<span ng-repeat="(name, package) in selectedPackages">'{{ name }}': '{{ package.options.version.value }}',
     	</span>
     }
 }
