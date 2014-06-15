@@ -1,0 +1,23 @@
+{
+	"grunt-contrib-concat": {
+		"task": "concat",
+		"template": "src: %source-files%,\ndest: %dest-files%",
+		"url": "https://github.com/gruntjs/grunt-contrib-concat",
+		"options": {
+			"version": {
+				"name": "Version",
+				"value": "*"
+			},
+			"source-files": {
+				"name": "Source files",
+				"placeholder": "'source.js' or ['multiple.js', 'sources.js']",
+				"description": "Specify the source file(s) as a single file or multiple files in an array."
+			},
+			"dest-files": {
+				"name": "Destination files",
+				"placeholder": "'destination.js'",
+				"description": "Specify the single destination file."
+			}
+		}
+	}
+}

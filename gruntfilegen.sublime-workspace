@@ -1,0 +1,901 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"text-",
+				"text-decoration"
+			],
+			[
+				"font",
+				"font-style"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"sp",
+				"sprintf"
+			],
+			[
+				"bo",
+				"border-spacing"
+			],
+			[
+				"load",
+				"loadNpmTasks"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"pas",
+				"past_events"
+			],
+			[
+				"fn",
+				"function"
+			],
+			[
+				"Bo",
+				"BorrowHistory"
+			],
+			[
+				"rg",
+				"rgba()"
+			],
+			[
+				"ite",
+				"item	Itemize"
+			],
+			[
+				"item",
+				"itemize"
+			],
+			[
+				"background",
+				"background-size"
+			],
+			[
+				"get_pr",
+				"get_permalink"
+			],
+			[
+				"add",
+				"addEventListener"
+			],
+			[
+				"p",
+				"prototype"
+			],
+			[
+				"textr",
+				"text-decoration"
+			],
+			[
+				"border-c",
+				"border-collapse"
+			],
+			[
+				"mobile",
+				"mobile-menu-button"
+			],
+			[
+				"fon",
+				"font-family"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"str_re",
+				"str_replace"
+			],
+			[
+				"i",
+				"italic"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"dis",
+				"display"
+			],
+			[
+				"border",
+				"border-spacing"
+			],
+			[
+				"spa",
+				"border-spacing"
+			],
+			[
+				"tec",
+				"text-decoration"
+			],
+			[
+				"path",
+				"path_name"
+			],
+			[
+				"no",
+				"none"
+			],
+			[
+				"te",
+				"text-decoration"
+			],
+			[
+				"u",
+				"uppercase"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"mailchi",
+				"mailchimp_subscribe"
+			],
+			[
+				"mailchimp",
+				"mailchimp_get_list"
+			],
+			[
+				"mail",
+				"mailchimp_subscribe"
+			],
+			[
+				"a",
+				"afn	Anoynmous Function"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"f",
+				"for	for (…) {…} (Improved Native For-Loop)"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 173.0,
+		"selected_items":
+		[
+			[
+				"reindent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"grunt",
+				"Grunt"
+			],
+			[
+				"twi",
+				"Set Syntax: HTML (Twig)"
+			],
+			[
+				"reinden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"rena",
+				"Emmet: Rename Tag"
+			],
+			[
+				"html",
+				"Snippet: html"
+			],
+			[
+				"renamt",
+				"Emmet: Rename Tag"
+			],
+			[
+				"tabs",
+				"Indentation: Convert to Tabs"
+			],
+			[
+				"syntatwi",
+				"Set Syntax: HTML (Twig)"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"comment",
+				"Toggle Comment"
+			],
+			[
+				"packains",
+				"Package Control: Install Package"
+			],
+			[
+				"less",
+				"Set Syntax: LESS"
+			],
+			[
+				"erindent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"rename",
+				"Emmet: Rename Tag"
+			],
+			[
+				"comme",
+				"Toggle Comment"
+			],
+			[
+				"grut",
+				"Grunt: Kill Running Tasks"
+			],
+			[
+				"commen",
+				"Toggle Comment"
+			],
+			[
+				"removepa",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"new latex",
+				"Snippet: New Latex Article"
+			],
+			[
+				"wrapsel",
+				"Snippet: Wrap selection in LaTeX command"
+			],
+			[
+				"reinde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"isntall",
+				"Package Control: Install Package"
+			],
+			[
+				"build",
+				"Build: Build"
+			],
+			[
+				"syntaxlate",
+				"Set Syntax: LaTeX"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"latexing",
+				"Set Syntax: LaTeXing"
+			],
+			[
+				"latexpd",
+				"LaTeXing: Open PDF"
+			],
+			[
+				"latex",
+				"LaTeXing: Check System"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"packagere",
+				"Package Control: Remove Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"late",
+				"LaTeXTools: View PDF"
+			],
+			[
+				"grt",
+				"Grunt: Kill Running Tasks"
+			],
+			[
+				"pakcage",
+				"Package Control: Remove Package"
+			],
+			[
+				"unfold",
+				"Code Folding: Unfold All"
+			],
+			[
+				"fold",
+				"BracketHighlighter: Fold Bracket Content"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"new file",
+				"File: New File Relative to Project Root"
+			],
+			[
+				"package ins",
+				"Package Control: Install Package"
+			],
+			[
+				"projec",
+				"Project: Save As"
+			],
+			[
+				"proe",
+				"Project: Save As"
+			],
+			[
+				"mini",
+				"Minify Javascript to file"
+			],
+			[
+				"minif",
+				"Minify::Minify File"
+			],
+			[
+				"minify",
+				"Minify::Minify File"
+			],
+			[
+				"minfy",
+				"Minify::Minify File"
+			],
+			[
+				"prefix",
+				"Autoprefix CSS"
+			],
+			[
+				"beau",
+				"Beautify::Beautify File"
+			],
+			[
+				"beaut",
+				"Beautify::Beautify File"
+			],
+			[
+				"min",
+				"Minify::Minify File"
+			],
+			[
+				"redinet",
+				"Preferences: Key Bindings - Default"
+			],
+			[
+				"boiler",
+				"Snippet: htmlboiler"
+			],
+			[
+				"packag",
+				"Package Control: Remove Package"
+			],
+			[
+				"prefic",
+				"Autoprefix CSS"
+			],
+			[
+				"comm",
+				"Toggle Comment"
+			],
+			[
+				"indent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"ins pc",
+				"Package Control: Install Package"
+			],
+			[
+				"reid",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"prefi",
+				"Autoprefix CSS"
+			],
+			[
+				"commet",
+				"Toggle Comment"
+			],
+			[
+				"reind",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"pref",
+				"Autoprefix CSS"
+			],
+			[
+				"inde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"fe",
+				"Fetch: Package"
+			],
+			[
+				"fet",
+				"Fetch: Manage"
+			],
+			[
+				"syntax php",
+				"Set Syntax: PHP"
+			],
+			[
+				"togg",
+				"Toggle Comment"
+			],
+			[
+				"tog",
+				"Toggle Comment"
+			],
+			[
+				"toggle",
+				"Toggle Comment"
+			],
+			[
+				"to",
+				"Toggle Comment"
+			],
+			[
+				"synt php",
+				"Set Syntax: PHP"
+			],
+			[
+				"Package Control: upda",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"fetch",
+				"Fetch: Package"
+			],
+			[
+				"latex set",
+				"LaTeXTools: Reconfigure and migrate settings"
+			],
+			[
+				"syntax late",
+				"Set Syntax: LaTeX Memoir"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"syntax la",
+				"Set Syntax: LaTeX"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 512.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/xampp/htdocs/jennisalonen/wp-content/themes/jennisalonen/views/footer.twig",
+		"/D/xampp/htdocs/jennisalonen/wp-content/themes/jennisalonen/views/header.twig",
+		"/D/xampp/htdocs/jennisalonen/wp-content/themes/jennisalonen/views/html-head.twig",
+		"/D/xampp/htdocs/jennisalonen/wp-content/themes/jennisalonen/archive-photography.php",
+		"/D/xampp/htdocs/jennisalonen/wp-content/themes/jennisalonen/views/photography.twig",
+		"/D/xampp/htdocs/jennisalonen/wp-content/themes/jennisalonen/assets/everything.js",
+		"/D/xampp/htdocs/jennisalonen/wp-content/themes/jennisalonen/views/photo-column.twig",
+		"/D/xampp/htdocs/jennisalonen/wp-content/themes/jennisalonen/views/photo-thumb.twig",
+		"/D/xampp/htdocs/jennisalonen/wp-content/themes/jennisalonen/functions.php",
+		"/D/xampp/htdocs/jennisalonen/wp-content/themes/jennisalonen/index.php",
+		"/D/xampp/htdocs/jennisalonen/wp-content/themes/jennisalonen/views/404.twig",
+		"/D/xampp/htdocs/jennisalonen/wp-content/themes/jennisalonen/less/fonts.less",
+		"/D/xampp/htdocs/jennisalonen/wp-content/themes/jennisalonen/Gruntfile.js",
+		"/D/xampp/htdocs/jennisalonen/wp-content/themes/jennisalonen/views/base.twig",
+		"/C/Users/Max/Desktop/perspective.html",
+		"/C/Users/Max/Desktop/GPSVsCellID/src/com/maxerik/gpsvscellid/CollectorService.java",
+		"/C/Users/Max/Desktop/GPSVsCellID/src/com/maxerik/gpsvscellid/GpsProvider.java",
+		"/C/Users/Max/Desktop/GPSVsCellID/src/com/maxerik/gpsvscellid/TrueGPSLocator.java",
+		"/C/Users/Max/Desktop/GPSVsCellID/src/com/maxerik/gpsvscellid/MainActivity.java",
+		"/D/xampp/htdocs/jennisalonen/wp-content/themes/jennisalonen/less/popup.less",
+		"/D/xampp/htdocs/jennisalonen/wp-content/themes/jennisalonen/assets/everything.css",
+		"/D/xampp/htdocs/jennisalonen/wp-content/themes/jennisalonen/views/archive-photography.php",
+		"/D/xampp/htdocs/jennisalonen/wp-content/themes/jennisalonen/package.json",
+		"/D/xampp/htdocs/jennisalonen/wp-content/themes/jennisalonen/jennisalonen.sublime-project",
+		"/D/xampp/htdocs/jennisalonen/wp-content/themes/jennisalonen/views/index.twig",
+		"/C/Users/Max/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/D/xampp/htdocs/jennisalonen/wp-includes/SimplePie/Cache/Base.php",
+		"/D/xampp/htdocs/jennisalonen/wp-content/plugins/timber-library/vendor/twig/twig/lib/Twig/Node/Expression/Binary/BitwiseAnd.php",
+		"/D/xampp/htdocs/jennisalonen/wp-includes/bookmark.php",
+		"/C/Users/Max/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Max/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/D/xampp/htdocs/jennisalonen/wp-content/themes/jennisalonen/footer.php",
+		"/D/xampp/htdocs/jennisalonen/wp-content/themes/jennisalonen/style.css",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/css/main.css",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/node_modules/grunt-contrib-uglify/node_modules/uglify-js/lib/mozilla-ast.js",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/menus.php",
+		"/C/Users/Max/AppData/Local/Temp/fz3temp-1/.htaccess",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/header.php",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/css/main.less",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/footer.php",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/css/bigvideo.css",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/css/video-js.css",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/js/bigvideo.js",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/js/video.js",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/res/all.js",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/js/all.js",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/js/jquery.min.js",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/archive-releases.php",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/shortcodes.php",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/functions.php",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/archive-events.php",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/post-types.php",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/settings.php",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/js/script.js",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/single-releases.php",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/single-agency.php",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/css/mobile.css",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/Gruntfile.js",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/package.json",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/fonts/fonts.css",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/fonts/aller_lt-demo.html",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/fonts/allerdisplay-demo.html",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/fonts/aller_rg-demo.html",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/fonts/generator_config.txt",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/archive-agency.php",
+		"/C/Users/Max/Desktop/soundnerd.html",
+		"/C/Users/Max/Desktop/bootstrap.html",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/single-events.php",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/archive-mixtapes.php",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/index.php",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/css/index.php",
+		"/D/Downloads/sqlite/sql.sql",
+		"/D/Downloads/sqlite/create_tables.sql",
+		"/D/Downloads/sqlite/example_data.sql",
+		"/C/Users/Max/Desktop/dict",
+		"/C/Users/Max/Desktop/queries.sql",
+		"/C/Users/Max/Desktop/Untitled spreadsheet - Sheet1.csv",
+		"/C/Users/Max/Desktop/database.s3db",
+		"/C/Users/Max/AppData/Roaming/Sublime Text 3/Packages/LaTeX Word Count/LaTeXWordCount.sublime-settings",
+		"/C/Users/Max/AppData/Roaming/Sublime Text 3/Packages/LaTeXTools/Default (Windows).sublime-keymap",
+		"/C/Users/Max/Documents/Latex/studio2 dokumentti.tex",
+		"/C/Users/Max/AppData/Roaming/Sublime Text 3/Packages/User/LaTeXWordCount.sublime-settings",
+		"/C/Users/Max/AppData/Roaming/Sublime Text 3/Packages/User/New Latex Article.sublime-snippet",
+		"/C/Users/Max/Desktop/asdasdasd.spd",
+		"/C/Users/Max/Desktop/test.spd",
+		"/C/Users/Max/Desktop/asdasd.spd",
+		"/C/Users/Max/Desktop/324234.spd",
+		"/C/Users/Max/Desktop/test.py",
+		"/C/Users/Max/AppData/Roaming/Sublime Text 3/Packages/User/LaTeXTools.sublime-settings",
+		"/C/Users/Max/AppData/Roaming/Sublime Text 3/Packages/LaTeXing/LaTeXing.sublime-settings",
+		"/D/Dropbox/msgstore-2014-04-26.1.db.crypt5",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/res/all.css",
+		"/C/Users/Max/Desktop/asd.spd",
+		"/C/Users/Max/AppData/Roaming/Sublime Text 3/Packages/Emmet/Default (Windows).sublime-keymap",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/css/fontello.min.css",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/css/reset.min.css",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/css/main.min.css",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/css/swipebox.min.css",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/css/mobile.min.css",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/css/fontello-embedded.css",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/css/fontello-codes.css",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/js/script.min.js",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/npm-debug.log",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/combined.css",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/combined.js",
+		"/C/Users/Max/AppData/Roaming/Sublime Text 3/Packages/Grunt/SublimeGrunt.sublime-settings",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/dept.sublime-project",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/home.php",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/releases-single.php",
+		"/D/xampp/htdocs/functionsjs/index.html",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/page-main.php",
+		"/D/xampp/htdocs/functionsjs/functions.js",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/css/animation.css",
+		"/D/xampp/htdocs/imagepreloader/image.php",
+		"/D/xampp/htdocs/imagepreloader/index.html",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/css/animation.min.css",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/css/reset.css",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/css/fontello.css",
+		"/C/Users/Max/AppData/Local/Temp/fz3temp-1/wp-config.php",
+		"/D/xampp/htdocs/deptmailer/mailer/sendmail.php",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/mailchimp/subscribe.php",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/script.js",
+		"/D/xampp/htdocs/colorjs/index.html",
+		"/D/xampp/htdocs/colorjs/colors.js",
+		"/D/Torrents/Arturia Arp2600 V VSTi RTAS v2.5.1 Incl. Keygen - AiR/AiR/air.nfo",
+		"/D/xampp/htdocs/cockpit/index.php",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/css/events.css",
+		"/D/xampp/htdocs/dept/wp-content/themes/dept/css/agency.css"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"D:\\xampp\\htdocs\\dept\\wp-content\\themes\\dept"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"photo",
+			"div class=\"col-md-4\"",
+			"class=\"col-md-8\"",
+			"class=\"col-md-4\"",
+			"div class=\"col-md-4\"",
+			"div class=\"row\"",
+			"160x90",
+			"c",
+			"5",
+			" class=\"img\"",
+			"img",
+			"src=\"http",
+			"src=\"shadow.png",
+			"overlay",
+			"a",
+			"ctrl+shift+r",
+			"ctrl+r",
+			"indent",
+			"ctrl+/",
+			"menu",
+			"get_template_directory_uri",
+			"script",
+			"type",
+			"text",
+			"echo",
+			"javascript",
+			"release",
+			"border-grey",
+			"border-gray",
+			"color: #",
+			"dotted",
+			")",
+			"__( ",
+			", 'text_domain' ",
+			"Aller",
+			"field1",
+			"px",
+			"post",
+			"Jorvin kirjasto",
+			"Customer",
+			"käyttö",
+			" &",
+			"pimp",
+			": ",
+			"Undoableita",
+			"-webkit",
+			"setAttribute",
+			"classList.remove",
+			"classList.add",
+			"center",
+			"vertically-centered",
+			"i",
+			"ctrl+shift",
+			"id(\"",
+			"\\",
+			"}\n",
+			" . '",
+			"' . ",
+			"box",
+			"padding",
+			"table",
+			"artist-",
+			"bottom",
+			"iframe",
+			"table",
+			"video",
+			"mobile",
+			"max",
+			"fn",
+			"$",
+			"php",
+			"getHSL",
+			"b",
+			"g",
+			"r",
+			"<?php echo",
+			"of_get",
+			"wp_nav",
+			"wp_dept",
+			"}\n",
+			"jquery",
+			"js",
+			"0.6",
+			"255",
+			"#fff",
+			"50",
+			"content-cell",
+			">\n",
+			"social",
+			"		\n",
+			"get_val",
+			"px",
+			"/>\n",
+			"10",
+			"px",
+			"					",
+			"script",
+			"h2",
+			"/>\n",
+			"\"\n",
+			"ssl",
+			"&auml;",
+			"<[^>]+>",
+			"));\n",
+			"file",
+			"        ",
+			"       ",
+			"      ",
+			"     ",
+			"    ",
+			"   ",
+			"  ",
+			"path"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"center-y",
+			"wp_ziqa_",
+			"ä",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 79.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "gruntfilegen.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"basewt",
+				"wp-content\\themes\\jennisalonen\\views\\base.twig"
+			],
+			[
+				"maincss",
+				"css\\main.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"D:\\xampp\\htdocs\\wikipediasearch\\wikipediatranslate.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 242.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
