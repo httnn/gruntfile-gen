@@ -2,37 +2,26 @@
 	"grunt-contrib-concat": {
 		"task": "concat",
 		"url": "https://github.com/gruntjs/grunt-contrib-concat",
-		"version": "*",
+		"type": "io",
 		"options": {
-			"src": {
-				"name": "Source files",
-				"value": "",
-				"placeholder": "'source.js' or ['multiple.js', 'sources.js']",
-				"description": "Specify the source file(s) as a single file or multiple files in an array."
-			},
-			"dest": {
-				"name": "Destination files",
-				"value": "",
-				"placeholder": "'destination.js'",
-				"description": "Specify the single destination file."
-			}
+
 		}
 	},
 	"grunt-contrib-watch": {
 		"task": "watch",
 		"url": "https://github.com/gruntjs/grunt-contrib-watch",
-		"version": "*",
+		"type": "i",
 		"options": {
-			"files": {
+			"src": {
 				"name": "Files",
 				"value": "",
-				"placeholder": "['array_of.js', 'files.css']",
+				"placeholder": "'list', 'of', 'files'",
 				"description": ""
 			},
 			"tasks": {
 				"name": "Tasks",
 				"value": "",
-				"placeholder": "['array', 'of', 'tasks']",
+				"placeholder": "'list', 'of', 'tasks'",
 				"description": ""
 			}
 		}
@@ -40,14 +29,62 @@
 	"grunt-contrib-less": {
 		"task": "less",
 		"url": "https://github.com/gruntjs/grunt-contrib-less",
-		"version": "*",
+		"type": "io",
 		"options": {
-			"paths": {
-				"name": "Paths",
-				"value": "",
-				"placeholder": "['array_of.js', 'files.css']",
-				"description": "Specifies directories to scan for @import directives when parsing."
+			"cleancss": {
+				"name": "Clean CSS",
+				"value": "false",
+				"placeholder": "true / false"
+			},
+			"compress": {
+				"name": "Compress",
+				"value": "false",
+				"placeholder": "true / false"
 			}
 		}
+	},
+	"grunt-contrib-cssmin": {
+		"task": "cssmin",
+		"url": "https://github.com/gruntjs/grunt-contrib-cssmin",
+		"type": "io",
+		"options": {
+			"banner": {
+				"name": "Banner",
+				"value": "",
+				"placeholder": "Any string.",
+				"description": "Prefix the compressed source with the given banner, with a linebreak inbetween."
+			}
+		}
+	},
+	"grunt-contrib-uglify": {
+		"task": "uglify",
+		"url": "https://github.com/gruntjs/grunt-contrib-uglify",
+		"type": "io",
+		"options": {
+			"mangle": {
+				"name": "Mangle",
+				"value": "false",
+				"placeholder": "true / false",
+				"description": "Turn on or off mangling with default options"
+			},
+			"compress": {
+				"name": "Compress",
+				"value": "false",
+				"placeholder": "true / false",
+				"description": "Turn on or off source compression with default options."
+			}
+		}
+	},
+	"grunt-contrib-clean": {
+		"task": "clean",
+		"url": "https://github.com/gruntjs/grunt-contrib-clean",
+		"type": "i",
+		"options": {}
+	},
+	"grunt-contrib-jshint": {
+		"task": "jshint",
+		"url": "https://github.com/gruntjs/grunt-contrib-clean",
+		"type": "i",
+		"options": {}
 	}
 }

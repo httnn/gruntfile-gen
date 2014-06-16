@@ -1,10 +1,40 @@
 grunt-contrib-concat:
-src: %src%,
-dest: %dest%
+files: {
+	'%dest%': [%src%]
+}
 #
 grunt-contrib-watch:
-files: %files%,
-tasks: %tasks%
+files: [%src%],
+tasks: [%tasks%]
 #
 grunt-contrib-less:
-paths: %paths%
+files: {
+	'%dest%': [%src%]
+},
+options: {
+	cleancss: %cleancss%,
+	compress: %compress%
+}
+#
+grunt-contrib-cssmin:
+files: {
+	'%dest%': [%src%]
+},
+options: {
+	banner: '%banner%'
+}
+#
+grunt-contrib-uglify:
+files: {
+	'%dest%': [%src%]
+},
+options: {
+	mangle: %mangle%,
+	compress: %compress%
+}
+#
+grunt-contrib-clean:
+files: [%src%]
+#
+grunt-contrib-jshint:
+files: [%src%]

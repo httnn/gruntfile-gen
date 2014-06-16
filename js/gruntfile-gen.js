@@ -8,11 +8,42 @@ angular.module("gruntfile-gen", ["autocomplete"])
 				t.packages = packages;
 				$http({ method: "GET", url: "packages/templates.txt"})
 				.success(function (templates) {
-					var packages = templates.split("#");
+					var templates = templates.split("#");
 
-					for(var i = 0; i < packages.length; i++) {
-						var p = packages[i].trim().split("\n");
-						t.packages[p.shift().replace(":", "").trim()].template = p.join("\n\t\t\t\t");
+					for(var i = 0; i < templates.length; i++) {
+						var p = templates[i].trim().split("\n");
+						t.packages[p.shift().replace(":", "").trim()].template = p.join("\n\t\t\t");
+					}
+
+					for(packageName in t.packages) {
+						var package = t.packages[packageName];
+						package.options.version = {
+							name: "Version",
+							value: "*",
+							description: "* = latest version."
+						};
+						if(!package.options.src) {
+							package.options.src = {
+								name: "Source files",
+								value: "",
+								description: "Specify the source file(s) as a single file or multiple files in an array.",
+								placeholder: "'list', 'of', 'files'"
+							};
+						}
+
+						if(!package.options.dest) {
+							package.options.dest = {
+								name: "Destination files",
+								value: "",
+								description: "Specify the single destination file.",
+								placeholder: "destination.js"
+							};
+						}
+
+						if(package.type === "i")
+							delete package.options.dest;
+						else if(package.type === "o")
+							delete package.options.src;
 					}
 
 					callback();

@@ -33,13 +33,6 @@
 				</div>
 				<div class="panel-body">
 					<form class="form-horizontal" role="form">
-						<div class="form-group">
-							<label class="col-sm-3 control-label" title="{{ option.description }}">Version</label>
-							<div class="col-sm-9">
-								<input type="text" class="form-control" ng-model="package.version" />
-							</div>
-						</div>
-
 						<div class="form-group" ng-repeat="option in package.options">
 							<label class="col-sm-3 control-label"><abbr title="{{ option.description }}">{{ option.name }}</abbr></label>
 							<div class="col-sm-9">
@@ -59,7 +52,7 @@
     'title' : 'MySite',
     'version' : '0.0.1',
     'devDependencies': {
-    	<span ng-repeat="(name, package) in selectedPackages">'{{ name }}': '{{ package.version }}'<span ng-if="!$last">,
+    	<span ng-repeat="(name, package) in selectedPackages">'{{ name }}': '{{ package.options.version.value }}'<span ng-if="!$last">,
 		</span></span>
     }
 }
@@ -72,9 +65,7 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 		<span ng-repeat="package in selectedPackages">
 		{{ package.task }}: {
-			example: {
-				{{makeTemplate(package)}}
-			}
+			{{makeTemplate(package)}}
 		}<span ng-if="!$last">,</span></span>
 
 	});
