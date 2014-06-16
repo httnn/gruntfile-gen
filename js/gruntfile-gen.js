@@ -12,7 +12,7 @@ angular.module("gruntfile-gen", ["autocomplete"])
 
 					for(var i = 0; i < packages.length; i++) {
 						var p = packages[i].trim().split("\n");
-						t.packages[p.shift().replace(":", "").trim()].template = p.join("\n");
+						t.packages[p.shift().replace(":", "").trim()].template = p.join("\n\t\t\t\t");
 					}
 
 					callback();

@@ -23,7 +23,7 @@
 			</div>
 			<form role="form">
 				<div class="form-group">
-					<autocomplete type="text" on-select="addPackage" ng-model="selectedPackage" attr-placeholder="Start typing to add package..." data="names" attr-input-class="form-control" />
+					<autocomplete on-select="addPackage" click-activation="true" ng-model="selectedPackage" attr-placeholder="Start typing to add package..." data="names" attr-input-class="form-control" />
 				</div>
 			</form>
 
@@ -73,7 +73,7 @@ module.exports = function(grunt) {
 		<span ng-repeat="package in selectedPackages">
 		{{ package.task }}: {
 			example: {
-{{makeTemplate(package)}}
+				{{makeTemplate(package)}}
 			}
 		}<span ng-if="!$last">,</span></span>
 
