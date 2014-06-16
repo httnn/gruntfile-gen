@@ -1,90 +1,44 @@
-{
-	"grunt-contrib-concat": {
-		"task": "concat",
+[
+	{
+		"name": "grunt-contrib-concat",
 		"url": "https://github.com/gruntjs/grunt-contrib-concat",
 		"type": "io",
-		"options": {
-
-		}
+		"options": []
 	},
-	"grunt-contrib-watch": {
-		"task": "watch",
+	{
+		"name": "grunt-contrib-watch",
 		"url": "https://github.com/gruntjs/grunt-contrib-watch",
 		"type": "i",
-		"options": {
-			"src": {
-				"name": "Files",
-				"value": "",
-				"placeholder": "'list', 'of', 'files'",
-				"description": ""
-			},
-			"tasks": {
-				"name": "Tasks",
-				"value": "",
-				"placeholder": "'list', 'of', 'tasks'",
-				"description": ""
-			}
-		}
+		"options": []
 	},
-	"grunt-contrib-less": {
-		"task": "less",
+	{
+		"name": "grunt-contrib-less",
 		"url": "https://github.com/gruntjs/grunt-contrib-less",
 		"type": "io",
-		"options": {
-			"cleancss": {
-				"name": "Clean CSS",
-				"value": "false",
-				"placeholder": "true / false"
-			},
-			"compress": {
-				"name": "Compress",
-				"value": "false",
-				"placeholder": "true / false"
-			}
-		}
+		"options": []
 	},
-	"grunt-contrib-cssmin": {
-		"task": "cssmin",
+	{
+		"name": "grunt-contrib-cssmin",
 		"url": "https://github.com/gruntjs/grunt-contrib-cssmin",
 		"type": "io",
-		"options": {
-			"banner": {
-				"name": "Banner",
-				"value": "",
-				"placeholder": "Any string.",
-				"description": "Prefix the compressed source with the given banner, with a linebreak inbetween."
-			}
-		}
+		"options": []
 	},
-	"grunt-contrib-uglify": {
-		"task": "uglify",
+	{
+		"name": "grunt-contrib-uglify",
 		"url": "https://github.com/gruntjs/grunt-contrib-uglify",
 		"type": "io",
-		"options": {
-			"mangle": {
-				"name": "Mangle",
-				"value": "false",
-				"placeholder": "true / false",
-				"description": "Turn on or off mangling with default options"
-			},
-			"compress": {
-				"name": "Compress",
-				"value": "false",
-				"placeholder": "true / false",
-				"description": "Turn on or off source compression with default options."
-			}
-		}
+		"options": []
 	},
-	"grunt-contrib-clean": {
-		"task": "clean",
+	{
+		"name": "grunt-contrib-clean",
 		"url": "https://github.com/gruntjs/grunt-contrib-clean",
 		"type": "i",
-		"options": {}
+		"options": []
 	},
-	"grunt-contrib-jshint": {
-		"task": "jshint",
+	{
+		"name": "grunt-contrib-jshint",
 		"url": "https://github.com/gruntjs/grunt-contrib-clean",
 		"type": "i",
-		"options": {}
+		"options": []
 	}
-}
+]

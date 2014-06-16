@@ -1,4 +1,4 @@
-Gruntfile generator
+Gruntfile boilerplate generator
 =============
 
 ### Still under heavy development, not usable yet!

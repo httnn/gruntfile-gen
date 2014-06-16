@@ -6,70 +6,40 @@ angular.module("gruntfile-gen", ["autocomplete"])
 			$http({ method: "GET", url: "packages/packages.json" })
 			.success(function(packages) {
 				t.packages = packages;
-				$http({ method: "GET", url: "packages/templates.txt"})
-				.success(function (templates) {
-					var templates = templates.split("#");
-
-					for(var i = 0; i < templates.length; i++) {
-						var p = templates[i].trim().split("\n");
-						t.packages[p.shift().replace(":", "").trim()].template = p.join("\n\t\t\t");
-					}
-
-					for(packageName in t.packages) {
-						var package = t.packages[packageName];
-						package.options.version = {
-							name: "Version",
-							value: "*",
-							description: "* = latest version."
-						};
-						if(!package.options.src) {
-							package.options.src = {
-								name: "Source files",
-								value: "",
-								description: "Specify the source file(s) as a single file or multiple files in an array.",
-								placeholder: "'list', 'of', 'files'"
-							};
-						}
-
-						if(!package.options.dest) {
-							package.options.dest = {
-								name: "Destination files",
-								value: "",
-								description: "Specify the single destination file.",
-								placeholder: "destination.js"
-							};
-						}
-
-						if(package.type === "i")
-							delete package.options.dest;
-						else if(package.type === "o")
-							delete package.options.src;
-					}
-
-					callback();
-				});
+				callback();
 			});
 		},
-		packages: {}
+		packages: []
 	};
 })
 .controller("PackageCtrl", function ($scope, $http, Packages) {
-	$scope.selectedPackages = {};
-
-	$scope.addPackage = function (package) {
-		$scope.selectedPackages[package] = $scope.packages[package];
-		$scope.selectedPackage = "";
+	$scope.selectedPackages = [];
+	$scope.packages = [];
+	$scope.settings = {
+		title: "My App",
+		appVersion: "0.0.1",
+		gruntVersion: "0.4.2",
+		fileFieldType: "",
+		indentation: "tabs",
+		getName: function () {
+			return this.title.replace(/[^a-z]/gi, "");
+		}
 	};
 
-	$scope.removePackage = function (name) {
-		delete $scope.selectedPackages[name];
+	$scope.addPackage = function (packageName) {
+		$scope.selectedPackages.push($scope.getPackageByName(packageName));
 	};
 
-	$scope.makeTemplate = function (package) {
-		var output = package.template;
-		for(option in package.options)
-			output = output.replace(new RegExp("\%" + option + "\%"), package.options[option].value);
-		return output;
+	$scope.removePackage = function (packageName) {
+		$scope.selectedPackages.splice($scope.selectedPackages.indexOf($scope.getPackageByName(packageName)), 1);
+	};
+
+	$scope.getPackageByName = function (packageName) {
+		for (var i = 0; i < $scope.packages.length; i++) {
+			if($scope.packages[i].name === packageName)
+				return $scope.packages[i];
+		}
+		return null;
 	};
 
 	$scope.saveGruntfile = function () {
@@ -82,8 +52,21 @@ angular.module("gruntfile-gen", ["autocomplete"])
 		saveAs(new Blob([content], {type: "text/plain;charset=utf-8"}), "package.json");
 	};
 
+	$scope.getTaskName = function (packageName) {
+		var p = packageName.split("-");
+		return p[p.length - 1];
+	};
+
+	$scope.getPackageNames = function () {
+		var output = [];
+		for(var i = 0; i < $scope.packages.length; i++) {
+			output.push($scope.packages[i].name);
+		}
+		return output;
+	};
+
 	Packages.load(function () {
 		$scope.packages = Packages.packages;
-		$scope.names = Object.keys(Packages.packages);
+		$scope.names = $scope.getPackageNames();
 	});
 });
