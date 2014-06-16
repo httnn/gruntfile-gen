@@ -38,7 +38,7 @@
 					</div>
 				</div>
 				<div class="row">
-					<div class="form-group col-md-4">
+					<div class="form-group col-md-5">
 						<label>File field type</label>
 						<select class="form-control">
 							<option>type 1</option>
@@ -52,9 +52,9 @@
 							<option value="spaces">spaces</option>
 						</select>
 					</div>
-					<div class="form-group col-md-4">
+					<div class="form-group col-md-3">
 						<label>Number of spaces</label>
-						<input type="text" class="form-control" value="4" ng-disabled="settings.indentation == 'tabs'" />
+						<input type="text" class="form-control" ng-model="settings.spaces" ng-disabled="settings.indentation == 'tabs'" />
 					</div>
 				</div>
 				<div class="row">
@@ -74,18 +74,7 @@
 
 		<div class="col-md-5">
 			<h3>package.json<a href="#" ng-click="savePackage()" class="pull-right"><span class="glyphicon glyphicon-download-alt"></span></a></h3>
-			<pre id="package">
-{
-	'name' : '{{ settings.getName() }}',
-	'title' : '{{ settings.title }}',
-	'version' : '{{ settings.appVersion }}',
-	'devDependencies': {
-		'grunt': '{{ settings.gruntVersion }}'
-		<span ng-repeat="package in selectedPackages">'{{ package.name }}': '*'<span ng-if="!$last">,
-		</span></span>
-	}
-}
-</pre>
+			<pre id="package">{{ getPackageFile() }}</pre>
 
 	<h3>Gruntfile.js<a href="#" ng-click="saveGruntfile()" class="pull-right"><span class="glyphicon glyphicon-download-alt"></span></a></h3>
 	<pre id="gruntfile">
