@@ -23,42 +23,43 @@
 			</div>
 			<form role="form">
 				<div class="row">
-					<div class="form-group col-md-6">
+					<div class="form-group col-sm-9">
 						<label>App title</label>
 						<input type="text" class="form-control" ng-model="settings.title" />
 					</div>
 
-					<div class="form-group col-md-3">
+					<div class="form-group col-sm-3">
 						<label>App version</label>
 						<input type="text" class="form-control" ng-model="settings.appVersion" />
 					</div>
-					<div class="form-group col-md-3">
+				</div>
+				<div class="row">
+					<div class="form-group col-sm-2">
 						<label>Grunt version</label>
 						<input type="text" class="form-control" ng-model="settings.gruntVersion" />
 					</div>
-				</div>
-				<div class="row">
-					<div class="form-group col-md-5">
-						<label>File field type</label>
-						<select class="form-control">
-							<option>type 1</option>
-							<option>type 2</option>
+					<div class="form-group col-sm-4">
+						<label>File format</label>
+						<select class="form-control" ng-model="settings.fileFormat">
+							<option value="compact">compact</option>
+							<option value="object">object</option>
 						</select>
 					</div>
-					<div class="form-group col-md-4">
+					<div class="form-group col-sm-3">
 						<label>Indent using</label>
 						<select class="form-control" ng-model="settings.indentation">
 							<option value="tabs" selected>tabs</option>
 							<option value="spaces">spaces</option>
 						</select>
 					</div>
-					<div class="form-group col-md-3">
+					<div class="form-group col-sm-3" ng-hide="settings.indentation == 'tabs'">
 						<label>Number of spaces</label>
-						<input type="text" class="form-control" ng-model="settings.spaces" ng-disabled="settings.indentation == 'tabs'" />
+						<input type="text" class="form-control" ng-model="settings.spaces" />
 					</div>
 				</div>
+				<hr />
 				<div class="row">
-					<div class="form-group col-md-12">
+					<div class="form-group col-sm-12">
 						<label>Add package</label>
 						<autocomplete on-select="addPackage" click-activation="true" ng-model="selectedPackage" attr-placeholder="Start typing..." data="names" attr-input-class="form-control" />
 					</div>
@@ -74,31 +75,11 @@
 
 		<div class="col-md-5">
 			<h3>package.json<a href="#" ng-click="savePackage()" class="pull-right"><span class="glyphicon glyphicon-download-alt"></span></a></h3>
-			<pre id="package">{{ getPackageFile() }}</pre>
+			<pre>{{ getPackageFile() }}</pre>
 
-	<h3>Gruntfile.js<a href="#" ng-click="saveGruntfile()" class="pull-right"><span class="glyphicon glyphicon-download-alt"></span></a></h3>
-	<pre id="gruntfile">
-module.exports = function(grunt) {
-	grunt.initConfig({
-		pkg: grunt.file.readJSON('package.json'),
-		<span ng-repeat="package in selectedPackages">
-		{{ getTaskName(package.name) }}: {
-			files: {
-				'destination': ['source']
-			},
-			options: {
-
-			}
-		}<span ng-if="!$last">,</span></span>
-
-	});
-
-	<span ng-repeat="package in selectedPackages">grunt.loadNpmTasks('{{ package.name }}');
-	</span>
-	grunt.registerTask('default', [<span ng-repeat="package in selectedPackages">'{{ getTaskName(package.name) }}'<span ng-if="!$last">, </span></span>]);
-};
-</pre>
-</div>
+			<h3>Gruntfile.js<a href="#" ng-click="saveGruntfile()" class="pull-right"><span class="glyphicon glyphicon-download-alt"></span></a></h3>
+			<pre>{{ getGruntfile() }}</pre>
+		</div>
 
 </div>
 </body>

@@ -2,6 +2,7 @@ angular.module("gruntfile-gen", ["autocomplete"])
 .controller("PackageCtrl", function ($scope, $http) {
 	$scope.selectedPackages = [];
 	$scope.packages = [];
+
 	$scope.settings = {
 		title: "My App",
 		appVersion: "0.0.1",
@@ -9,9 +10,8 @@ angular.module("gruntfile-gen", ["autocomplete"])
 		fileFieldType: "",
 		indentation: "tabs",
 		spaces: 4,
-		getName: function () {
-			return this.title.replace(/[^a-z]/gi, "");
-		}
+		fileFormat: "compact",
+		getName: function () { return this.title.replace(/[^a-z]/gi, ""); }
 	};
 
 	$scope.getPackageFile = function () {
@@ -28,6 +28,33 @@ angular.module("gruntfile-gen", ["autocomplete"])
 		
 		var tabIndent = $scope.settings.indentation === "tabs";
 		return JSON.stringify(output, undefined, tabIndent ? "\t" : Number($scope.settings.spaces));
+	};
+
+	$scope.getGruntfile = function () {
+		var output = "module.exports = function(grunt) {\n\tgrunt.initConfig({\n\t\tpkg: grunt.file.readJSON('package.json'),\n\n";
+		$scope.selectedPackages.forEach(function (p, i) {
+			var formats = {
+				"compact": { "i": "src: ['input']", "io": "src: ['input'], \n\t\t\tdest: 'output'" },
+				"object": { "i": "taskName: ['input']", "io": "files {\n\t\t\t\t'destination': ['source']\n\t\t\t}", }
+			};
+
+			var comma = i === $scope.selectedPackages.length - 1 ? "" : ",";
+			output += "\t\t" + $scope.getTaskName(p.name) + ": {\n\t\t\t" + formats[$scope.settings.fileFormat][p.type] +",\n\t\t\toptions: {\n\t\t\t\t\n\t\t\t}\n\t\t}" + comma + "\n";
+		});
+		output += "\n\t});\n\n";
+		
+		$scope.selectedPackages.forEach(function (p) {
+			output += "\tgrunt.loadNpmTasks('" + p.name + "');\n";
+		});
+		output += "\n\n\tgrunt.registerTask('default', [";
+
+		$scope.selectedPackages.forEach(function (p, i) {
+			var comma = i === $scope.selectedPackages.length - 1 ? "" : ", ";
+			output += "'" + $scope.getTaskName(p.name) + "'" + comma;
+		});
+
+		output += "]);\n\n};"
+		return $scope.settings.indentation === "spaces" ? output.replace(/\t/g, "          ".substring(0, $scope.settings.spaces)) : output;
 	};
 
 	$scope.addPackage = function (packageName) {
@@ -48,13 +75,11 @@ angular.module("gruntfile-gen", ["autocomplete"])
 	};
 
 	$scope.saveGruntfile = function () {
-		var content = document.getElementById("gruntfile").textContent;
-		saveAs(new Blob([content], {type: "text/plain;charset=utf-8"}), "Gruntfile.js");
+		saveAs(new Blob([$scope.getGruntfile()], {type: "text/plain;charset=utf-8"}), "Gruntfile.js");
 	};
 
 	$scope.savePackage = function () {
-		var content = document.getElementById("package").textContent;
-		saveAs(new Blob([content], {type: "text/plain;charset=utf-8"}), "package.json");
+		saveAs(new Blob([$scope.getPackageFile()], {type: "text/plain;charset=utf-8"}), "package.json");
 	};
 
 	$scope.getTaskName = function (packageName) {
