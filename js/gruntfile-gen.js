@@ -1,4 +1,27 @@
 angular.module("gruntfile-gen", ["autocomplete"])
+.directive("ngSort", function ($rootScope, $document) {
+	return function (scope, element, attrs) {
+		var a = attrs.ngSort.split(":");
+		var array = scope[a[0]];
+		var index = Number(a[1]);
+		element.off("mouseover");
+		element.on("mouseover", function () {
+			console.log(index);
+			$rootScope.focusedIndex = index;
+			$rootScope.$apply();
+		});
+		angular.element(document.body).on("mousewheel", function (e) {
+			if($rootScope.focusedIndex) {
+				if(e.wheelDelta < 0)
+					array.move($rootScope.focusedIndex, $rootScope.focusedIndex + 1);
+				else
+					array.move($rootScope.focusedIndex, $rootScope.focusedIndex - 1);
+				e.preventDefault();
+				$rootScope.$apply();
+			}
+		});
+	};
+})
 .controller("PackageCtrl", function ($scope, $http) {
 	$scope.selectedPackages = [];
 	$scope.packages = [];
@@ -35,7 +58,7 @@ angular.module("gruntfile-gen", ["autocomplete"])
 		$scope.selectedPackages.forEach(function (p, i) {
 			var formats = {
 				"compact": { "i": "src: ['input']", "io": "src: ['input'], \n\t\t\tdest: 'output'" },
-				"object": { "i": "taskName: ['input']", "io": "files {\n\t\t\t\t'destination': ['source']\n\t\t\t}", }
+				"object": { "i": "taskName: ['input']", "io": "'destination': ['source']", }
 			};
 
 			var comma = i === $scope.selectedPackages.length - 1 ? "" : ",";
@@ -100,9 +123,19 @@ angular.module("gruntfile-gen", ["autocomplete"])
 		return output;
 	};
 
+	$scope.updateNames = function () {
+		$scope.names = $scope.getPackageNames();
+	};
+
 	$http({ method: "GET", url: "packages/packages.json" })
 	.success(function(packages) {
 		$scope.packages = packages;
 		$scope.names = $scope.getPackageNames();
 	});
 });
+
+Array.prototype.move = function (old_index, new_index) {
+    if (new_index < this.length || new_index > -1)
+    	this.splice(new_index, 0, this.splice(old_index, 1)[0]);
+    return this;
+};
