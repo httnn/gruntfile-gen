@@ -2,13 +2,9 @@
 <html>
 <head>
 	<title>Gruntfile boilerplate generator</title>
-	<link rel="stylesheet" href="http://bootswatch.com/yeti/bootstrap.min.css">
-	<link rel="stylesheet" href="css/autocomplete.css">
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.17/angular.min.js"></script>
-	<script src="js/autocomplete.js"></script>
-	<script src="js/filesaver.js"></script>
-	<script src="js/gruntfile-gen.js"></script>
+	<link rel="stylesheet" href="http://bootswatch.com/yeti/bootstrap.min.css" />
+	<link rel="stylesheet" href="assets/everything.css" />
+	<script type="text/javascript" src="assets/everything.js"></script>
 	<style>
 		pre {
 			font-size: 0.75em;
@@ -53,9 +49,9 @@
 							<option value="spaces">spaces</option>
 						</select>
 					</div>
-					<div class="form-group col-sm-3" ng-hide="settings.indentation == 'tabs'">
+					<div class="form-group col-sm-3">
 						<label>Number of spaces</label>
-						<input type="text" class="form-control" ng-model="settings.spaces" />
+						<input type="text" class="form-control" ng-model="settings.spaces" ng-disabled="settings.indentation == 'tabs'" />
 					</div>
 				</div>
 				<hr />

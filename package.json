@@ -1,0 +1,11 @@
+{
+	"name": "Gruntfileboilerplategenerator",
+	"title": "Gruntfile boilerplate generator",
+	"version": "0.0.1",
+	"devDependencies": {
+		"grunt": "0.4.2",
+		"grunt-contrib-uglify": "*",
+		"grunt-contrib-cssmin": "*",
+		"grunt-contrib-watch": "*"
+	}
+}

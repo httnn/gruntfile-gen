@@ -22,7 +22,7 @@ angular.module("gruntfile-gen", ["autocomplete"])
 		});
 	};
 })
-.controller("PackageCtrl", function ($scope, $http) {
+.controller("PackageCtrl", ['$scope', '$http', function ($scope, $http) {
 	$scope.selectedPackages = [];
 	$scope.packages = [];
 
@@ -58,7 +58,7 @@ angular.module("gruntfile-gen", ["autocomplete"])
 		$scope.selectedPackages.forEach(function (p, i) {
 			var formats = {
 				"compact": { "i": "src: ['input']", "io": "src: ['input'], \n\t\t\tdest: 'output'" },
-				"object": { "i": "taskName: ['input']", "io": "'destination': ['source']", }
+				"object": { "i": "taskName: ['input']", "io": "'destination': ['source']" }
 			};
 
 			var comma = i === $scope.selectedPackages.length - 1 ? "" : ",";
@@ -127,12 +127,13 @@ angular.module("gruntfile-gen", ["autocomplete"])
 		$scope.names = $scope.getPackageNames();
 	};
 
-	$http({ method: "GET", url: "packages/packages.json" })
+
+	$http({ method: "GET", url: "packages.json" })
 	.success(function(packages) {
 		$scope.packages = packages;
 		$scope.names = $scope.getPackageNames();
 	});
-});
+}]);
 
 Array.prototype.move = function (old_index, new_index) {
     if (new_index < this.length || new_index > -1)
