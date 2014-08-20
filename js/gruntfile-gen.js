@@ -61,7 +61,7 @@ angular.module("gruntfile-gen", ["autocomplete"])
 			output += "'" + $scope.getTaskName(p.name) + "'" + comma;
 		});
 
-		output += "]);\n\n};"
+		output += "]);\n};"
 		return $scope.settings.indentation === "spaces" ? output.replace(/\t/g, "          ".substring(0, $scope.settings.spaces)) : output;
 	};
 
