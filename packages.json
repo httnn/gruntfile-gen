@@ -2,43 +2,76 @@
 	{
 		"name": "grunt-contrib-concat",
 		"url": "https://github.com/gruntjs/grunt-contrib-concat",
-		"type": "io",
-		"options": []
+		"options": ["separator:grunt.util.linefeed", "banner:''", "footer:''", "stripBanners:false", "process:false", "sourceMap:false", "sourceMapName:undefined", "sourceMapStyle:'embed'"]
 	},
 	{
 		"name": "grunt-contrib-watch",
 		"url": "https://github.com/gruntjs/grunt-contrib-watch",
-		"type": "i",
-		"options": []
+		"options": ["spawn:true", "interrupt:false", "debounceDelay:500", "interval:100", "event:'all'", "reload:false", "forever:true", "dateFormat:null", "atBegin:false", "livereload:false", "cwd:process.cwd()", "livereloadOnError:true"]
 	},
 	{
 		"name": "grunt-contrib-less",
 		"url": "https://github.com/gruntjs/grunt-contrib-less",
-		"type": "io",
-		"options": []
+		"options": ["paths:'source'", "rootpath:''", "compress:false", "cleancss:false", "ieCompat:true", "optimization:null", "strictImports:false", "strictMath:false", "strictUnits:false", "syncimport:false", "dumpLineNumbers:false", "relativeUrls:false", "customFunctions:null", "report:'min'", "sourceMap:false", "sourceMapFilename:''", "sourceMapURL:''", "sourceMapBasepath:''", "sourceMapRootpath:''", "outputSourceFiles:false", "modifyVars:null", "banner:''"]
 	},
 	{
 		"name": "grunt-contrib-cssmin",
 		"url": "https://github.com/gruntjs/grunt-contrib-cssmin",
-		"type": "io",
-		"options": []
+		"options": ["banner:null", "keepSpecialComments:'*'", "report:'min'"]
 	},
 	{
 		"name": "grunt-contrib-uglify",
 		"url": "https://github.com/gruntjs/grunt-contrib-uglify",
-		"type": "io",
-		"options": []
+		"options": ["mangle:{}", "compress:{}", "beautify:false", "expression:false", "report:'min'", "sourceMap:false", "sourceMapName:undefined", "sourceMapIn:undefined", "sourceMapIncludeSources:false", "enclose:undefined", "wrap:undefined", "exportAll:false", "preserveComments:undefined", "banner:''", "footer:''"]
 	},
 	{
 		"name": "grunt-contrib-clean",
 		"url": "https://github.com/gruntjs/grunt-contrib-clean",
-		"type": "i",
-		"options": []
+		"options": ["force:false", "no-write:false"]
 	},
 	{
 		"name": "grunt-contrib-jshint",
-		"url": "https://github.com/gruntjs/grunt-contrib-clean",
-		"type": "i",
+		"url": "https://github.com/gruntjs/grunt-contrib-jshint",
+		"options": ["globals:null", "jshintrc:null", "extensions:''", "ignores:null", "force:false", "reporter:null", "reporterOutput:null"]
+	},
+	{
+		"name": "grunt-contrib-connect",
+		"url": "https://github.com/gruntjs/grunt-contrib-connect",
+		"options": ["port:8000", "protocol:'http'", "hostname:'0.0.0.0'", "base:'.'", "directory:null", "keepalive:false", "debug:false", "livereload:false", "open:false", "useAvailablePort:false", "onCreateServer:null", "middleware:[]"]
+	},
+	{
+		"name": "grunt-karma",
+		"url": "https://github.com/karma-runner/grunt-karma",
+		"options": []
+	},
+	{
+		"name": "grunt-contrib-imagemin",
+		"url": "https://github.com/gruntjs/grunt-contrib-imagemin",
+		"options": ["optimizationLevel:3", "progressive:true", "interlaced:true", "use:null"]
+	},
+	{
+		"name": "grunt-concurrent",
+		"url": "https://github.com/sindresorhus/grunt-concurrent",
+		"options": ["limit:2", "logConcurrentOutput:false"]
+	},
+	{
+		"name": "grunt-usemin",
+		"url": "https://github.com/yeoman/grunt-usemin",
+		"options": ["dest:null", "staging:'.tmp'", "root:null", "flow:{}"]
+	},
+	{
+		"name": "grunt-autoprefixer",
+		"url": "https://github.com/nDmitry/grunt-autoprefixer",
+		"options": ["browsers:['> 1%', 'last 2 versions', 'Firefox ESR', 'Opera 12.1']", "cascade:true", "diff:false", "map:false", "silent:false"]
+	},
+	{
+		"name": "grunt-contrib-compass",
+		"url": "https://github.com/gruntjs/grunt-contrib-compass",
+		"options": ["gigantocluster-of-options-see-them-here:'https://github.com/gruntjs/grunt-contrib-compass'"]
+	},
+	{
+		"name": "grunt-contrib-requirejs",
+		"url": "https://github.com/gruntjs/grunt-contrib-requirejs",
 		"options": []
 	}
 ]

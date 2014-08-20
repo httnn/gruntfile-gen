@@ -1,27 +1,4 @@
 angular.module("gruntfile-gen", ["autocomplete"])
-.directive("ngSort", function ($rootScope, $document) {
-	return function (scope, element, attrs) {
-		var a = attrs.ngSort.split(":");
-		var array = scope[a[0]];
-		var index = Number(a[1]);
-		element.off("mouseover");
-		element.on("mouseover", function () {
-			console.log(index);
-			$rootScope.focusedIndex = index;
-			$rootScope.$apply();
-		});
-		angular.element(document.body).on("mousewheel", function (e) {
-			if($rootScope.focusedIndex) {
-				if(e.wheelDelta < 0)
-					array.move($rootScope.focusedIndex, $rootScope.focusedIndex + 1);
-				else
-					array.move($rootScope.focusedIndex, $rootScope.focusedIndex - 1);
-				e.preventDefault();
-				$rootScope.$apply();
-			}
-		});
-	};
-})
 .controller("PackageCtrl", ['$scope', '$http', function ($scope, $http) {
 	$scope.selectedPackages = [];
 	$scope.packages = [];
@@ -29,7 +6,7 @@ angular.module("gruntfile-gen", ["autocomplete"])
 	$scope.settings = {
 		title: "My App",
 		appVersion: "0.0.1",
-		gruntVersion: "0.4.2",
+		gruntVersion: "0.4.5",
 		fileFieldType: "",
 		indentation: "tabs",
 		spaces: 4,
@@ -54,22 +31,30 @@ angular.module("gruntfile-gen", ["autocomplete"])
 	};
 
 	$scope.getGruntfile = function () {
-		var output = "module.exports = function(grunt) {\n\tgrunt.initConfig({\n\t\tpkg: grunt.file.readJSON('package.json'),\n\n";
+		var output = "module.exports = function(grunt) {\n\tgrunt.initConfig({\n\t\tpkg: grunt.file.readJSON('package.json'),\n";
 		$scope.selectedPackages.forEach(function (p, i) {
 			var formats = {
-				"compact": { "i": "src: ['input']", "io": "src: ['input'], \n\t\t\tdest: 'output'" },
-				"object": { "i": "taskName: ['input']", "io": "'destination': ['source']" }
+				"compact": "src: ['source'], \n\t\t\t\tdest: 'destination'",
+				"object": "'destination': ['source']",
+				"array": "files: [\n\t\t\t\t\t { src: ['source'], dest: 'destination' }\n\t\t\t\t]"
 			};
 
+			var options = "";
+			p.options.forEach(function (option, i) {
+				option = option.split(":");
+				var comma = i === p.options.length - 1 ? "" : ",\n";
+				options += "\t\t\t\t'" + option[0] + "': " + option[1] + comma;
+			});
+
 			var comma = i === $scope.selectedPackages.length - 1 ? "" : ",";
-			output += "\t\t" + $scope.getTaskName(p.name) + ": {\n\t\t\t" + formats[$scope.settings.fileFormat][p.type] +",\n\t\t\toptions: {\n\t\t\t\t\n\t\t\t}\n\t\t}" + comma + "\n";
+			output += "\t\t" + $scope.getTaskName(p.name) + ": {\n\t\t\ttask: {\n\t\t\t\t" + formats[$scope.settings.fileFormat] + "\n\t\t\t},\n\t\t\toptions: {\n" + options + "\n\t\t\t}\n\t\t}" + comma + "\n";
 		});
-		output += "\n\t});\n\n";
+		output += "\t});\n\n";
 		
 		$scope.selectedPackages.forEach(function (p) {
 			output += "\tgrunt.loadNpmTasks('" + p.name + "');\n";
 		});
-		output += "\n\n\tgrunt.registerTask('default', [";
+		output += "\n\tgrunt.registerTask('default', [";
 
 		$scope.selectedPackages.forEach(function (p, i) {
 			var comma = i === $scope.selectedPackages.length - 1 ? "" : ", ";

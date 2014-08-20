@@ -9,6 +9,7 @@
 		pre {
 			font-size: 0.75em;
 			tab-size: 3;
+			word-wrap: normal;
 		}
 	</style>
 </head>
@@ -40,6 +41,7 @@
 						<select class="form-control" ng-model="settings.fileFormat">
 							<option value="compact">compact</option>
 							<option value="object">object</option>
+							<option value="array">array</option>
 						</select>
 					</div>
 					<div class="form-group col-sm-3">
@@ -51,7 +53,7 @@
 					</div>
 					<div class="form-group col-sm-3">
 						<label>Number of spaces</label>
-						<input type="text" class="form-control" ng-model="settings.spaces" ng-disabled="settings.indentation == 'tabs'" />
+						<input type="number" max="10" min="1" class="form-control" ng-model="settings.spaces" ng-disabled="settings.indentation == 'tabs'" />
 					</div>
 				</div>
 				<hr />
