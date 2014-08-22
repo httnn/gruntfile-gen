@@ -73,5 +73,10 @@
 		"name": "grunt-contrib-requirejs",
 		"url": "https://github.com/gruntjs/grunt-contrib-requirejs",
 		"options": []
+	},
+	{
+		"name": "grunt-contrib-sass",
+		"url": "https://github.com/gruntjs/grunt-contrib-sass",
+		"options": ["sourcemap:'auto'", "trace:false", "unixNewlines:false", "check:false", "style:'nested'", "precision:3", "quiet:false", "compass:false", "debugInfo:false", "lineNumbers:false", "loadPath:[]", "require:[]", "cacheLocation:'.sass-cache'", "noCache:false", "bundleExec:false", "banner:''", "update:false"]
 	}
 ]
